@@ -14,8 +14,6 @@
 
 ## Project Description
 
----
-
 ## Home Page
 
 ### Header Section
