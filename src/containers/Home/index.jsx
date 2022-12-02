@@ -142,7 +142,7 @@ const HomeContainer = () => {
                     </NoItemFuond>
                 )}
                 <PaginationBox>
-                    {Array(5).fill().map((_i, key) => <PaginationBtn onClick={() => handlePagination(key + 1)} key={key} isDark={isDark}>{key + 1}</PaginationBtn>)}
+                    {Array(5)?.fill()?.map((_i, key) => <PaginationBtn onClick={() => handlePagination(key + 1)} key={key} isDark={isDark}>{key + 1}</PaginationBtn>)}
                 </PaginationBox>
             </Main>
         </>

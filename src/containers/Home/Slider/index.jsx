@@ -42,8 +42,8 @@ const Slider = () => {
                 try {
                     const res = await getBooks()
                     if (res.status === 200) {
-                        setSliders(res.data);
-                        res.data.forEach((item) => {
+                        setSliders(res?.data);
+                        res?.data?.forEach((item) => {
                             dispatch(addBook(item));
                             dispatch(addCategory(item.authors));
                         })

@@ -51,7 +51,7 @@ const FavoriteContainer = () => {
                     </Top>
                     <Bottom isDark={isDark}>
                         <Info isDark={isDark}>
-                            {categories.map((item, key) => {
+                            {categories?.map((item, key) => {
                                 let authorsBooks = Object.values(fav?.books)?.filter((itemF) => itemF.authors === item)
                                 if (authorsBooks?.length) {
                                     return (
