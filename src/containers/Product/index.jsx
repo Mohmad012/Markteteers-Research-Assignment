@@ -35,7 +35,7 @@ const ProductContainer = () => {
       setProduct(books[id]);
     };
     getRightProducts();
-  }, [id]);
+  }, [id, books]);
 
   return (
     <Container isDark={isDark}>

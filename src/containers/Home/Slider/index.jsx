@@ -57,7 +57,7 @@ const Slider = () => {
     };
 
     getRightSliders();
-  }, []);
+  }, [books, dispatch]);
 
   return (
     <Container>

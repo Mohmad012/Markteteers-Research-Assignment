@@ -1,3 +1,4 @@
+import React from "react";
 import Layout from "layouts";
 
 import {
@@ -51,14 +52,14 @@ const FavoriteContainer = () => {
           <Bottom isDark={isDark}>
             <Info isDark={isDark}>
               {categories.map((item, key) => {
-                let authorsBooks = Object.values(fav?.books)?.filter((itemF) => itemF.authors == item)
+                let authorsBooks = Object.values(fav?.books)?.filter((itemF) => itemF.authors === item)
                 if (authorsBooks?.length) {
                   return (
                     <>
                       <Title type="categories" isDark={isDark} key={key}>{item}</Title>
                       {
-                        authorsBooks?.map((product) => (
-                          <>
+                        authorsBooks?.map((product, key) => (
+                          <React.Fragment key={key}>
                             <Product isDark={isDark}>
                               <ProductDetail isDark={isDark}>
                                 <Image loading="lazy" isDark={isDark} src={product.image_url} />
@@ -80,12 +81,14 @@ const FavoriteContainer = () => {
                               </ProductDetail>
                             </Product>
                             <Hr isDark={isDark} />
-                          </>
+                          </React.Fragment>
                         ))
                       }
                     </>
                   )
                 }
+
+                return ""
               })}
             </Info>
           </Bottom>

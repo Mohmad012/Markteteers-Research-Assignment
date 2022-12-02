@@ -32,14 +32,11 @@ const HomeContainer = () => {
 
   const [loading, setLoading] = useState(false);
   const [products, setProducts] = useState([]);
-  let allBooksIds = Object.keys(books)
-  let allBooksVals = Object.values(books)
-
   useEffect(() => {
     const getRightProducts = async () => {
       setLoading(true);
-      if (allBooksIds.length) {
-        setProducts(allBooksVals)
+      if (Object.keys(books).length) {
+        setProducts(Object.values(books))
         setLoading(false);
       } else {
         try {
@@ -59,7 +56,7 @@ const HomeContainer = () => {
       }
     };
     getRightProducts();
-  }, []);
+  }, [dispatch, books]);
 
   const handleAddRemoveFavProd = (item) => {
     const id = item.id;
@@ -73,7 +70,7 @@ const HomeContainer = () => {
 
   const handlePagination = async (key) => {
     let paginateBooks = key * 10;
-    let isInBooks = paginateBooks <= allBooksIds.length
+    let isInBooks = paginateBooks <= Object.keys(books).length
 
     setLoading(true);
     if (!isInBooks) {
@@ -93,7 +90,7 @@ const HomeContainer = () => {
         console.log(err);
       }
     } else {
-      const visibleBooks = allBooksVals?.slice((paginateBooks) - 10, paginateBooks)
+      const visibleBooks = Object.values(books)?.slice((paginateBooks) - 10, paginateBooks)
       setProducts(visibleBooks);
       setLoading(false);
     }
