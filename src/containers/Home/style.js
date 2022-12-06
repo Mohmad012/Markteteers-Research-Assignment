@@ -10,7 +10,7 @@ export const Main = styled.main`
     box-shadow: 0 0 10px #006785;
     border-radius: 10px;
     width: 100%;
-    background-color: #111;
+    background-image: linear-gradient(to bottom,#000000,#000000,#000000,#8899a6,#8899a6);
     padding-top: 50px;
     padding-bottom: 200px;
 
