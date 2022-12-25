@@ -69,6 +69,19 @@ const Slider = () => {
                 centeredSlides={true}
                 pagination={{ clickable: true }}
                 scrollbar={{ draggable: true }}
+                breakpoints={{
+                  // when window width is >= 640px
+                  640: {
+                    width: 640,
+                    slidesPerView: 2,
+                  },
+                  // when window width is >= 768px
+                  768: {
+                    width: 768,
+                    slidesPerView: 2,
+                    // gap:50
+                  },
+                }}
                 loop={true}
                 autoplay={{ delay: 3000, disableOnInteraction: false }}
             >
