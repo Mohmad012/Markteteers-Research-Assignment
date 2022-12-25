@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Markteteers-Research-Assignment/static/css/main.0849962c.css",
-    "main.js": "/Markteteers-Research-Assignment/static/js/main.387a2e63.js",
+    "main.js": "/Markteteers-Research-Assignment/static/js/main.2548542a.js",
     "index.html": "/Markteteers-Research-Assignment/index.html",
     "main.0849962c.css.map": "/Markteteers-Research-Assignment/static/css/main.0849962c.css.map",
-    "main.387a2e63.js.map": "/Markteteers-Research-Assignment/static/js/main.387a2e63.js.map"
+    "main.2548542a.js.map": "/Markteteers-Research-Assignment/static/js/main.2548542a.js.map"
   },
   "entrypoints": [
     "static/css/main.0849962c.css",
-    "static/js/main.387a2e63.js"
+    "static/js/main.2548542a.js"
   ]
 }
